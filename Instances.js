@@ -11,7 +11,8 @@ firstInstance.connect({
     source: "sourceElement",
     target: "targetElement"
 });
-
+firstInstance.draggable("sourceElement");
+firstInstance.draggable("targetElement");
 //Another Instance with defaults object
 var secondInstance = jsPlumb.getInstance({
     PaintStyle: {
