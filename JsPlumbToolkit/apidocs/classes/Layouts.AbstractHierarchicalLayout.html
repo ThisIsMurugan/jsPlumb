@@ -1,0 +1,1787 @@
+---
+layout: apidoc
+title:  "Layouts.AbstractHierarchicalLayout API documentation"
+date:   2014-01-01 00:00:00
+yuiGridsUrl: http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css
+yuiSeedUrl: http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js
+projectAssets: ../assets
+---
+
+
+
+<div id="doc">
+    <div id="bd" class="yui3-g">
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Cluster.html">Cluster</a></li>
+                                <li><a href="../classes/Edge.html">Edge</a></li>
+                                <li><a href="../classes/FaraheyInstance.html">FaraheyInstance</a></li>
+                                <li><a href="../classes/Graph.html">Graph</a></li>
+                                <li><a href="../classes/Group.html">Group</a></li>
+                                <li><a href="../classes/jsPlumb Palette directive.html">jsPlumb Palette directive</a></li>
+                                <li><a href="../classes/jsPlumbToolkit directive..html">jsPlumbToolkit directive.</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Dialogs.html">jsPlumbToolkit.Dialogs</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.DrawingTools.html">jsPlumbToolkit.DrawingTools</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Model.html">jsPlumbToolkit.Model</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.AbstractRenderer.html">jsPlumbToolkit.Renderers.AbstractRenderer</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.Miniview.html">jsPlumbToolkit.Renderers.Miniview</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Support.html">jsPlumbToolkit.Support</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Widgets.Lasso.html">jsPlumbToolkit.Widgets.Lasso</a></li>
+                                <li><a href="../classes/jsPlumbToolkitInstance.html">jsPlumbToolkitInstance</a></li>
+                                <li><a href="../classes/Layouts.Absolute.html">Layouts.Absolute</a></li>
+                                <li><a href="../classes/Layouts.AbsoluteBackedLayout.html">Layouts.AbsoluteBackedLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractHierarchicalLayout.html">Layouts.AbstractHierarchicalLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractLayout.html">Layouts.AbstractLayout</a></li>
+                                <li><a href="../classes/Layouts.EmptyLayout.html">Layouts.EmptyLayout</a></li>
+                                <li><a href="../classes/Layouts.Hierarchical.html">Layouts.Hierarchical</a></li>
+                                <li><a href="../classes/Layouts.Mistletoe.html">Layouts.Mistletoe</a></li>
+                                <li><a href="../classes/Layouts.Spring.html">Layouts.Spring</a></li>
+                                <li><a href="../classes/Mottle.html">Mottle</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/Path.html">Path</a></li>
+                                <li><a href="../classes/Port.html">Port</a></li>
+                                <li><a href="../classes/Selection.html">Selection</a></li>
+                                <li><a href="../classes/Surface.html">Surface</a></li>
+                                <li><a href="../classes/ZoomWidget.html">ZoomWidget</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>Layouts.AbstractHierarchicalLayout Class</h1>
+                        <div class="box meta">
+                        
+                                <div class="extends">
+                                    Extends <a href="../classes/Layouts.AbstractLayout.html" class="crosslink">Layouts.AbstractLayout</a>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>Mixin for hierarchical layouts (those that expect a root node). This class takes care of
+                        putting <code>rootNode</code> and <code>root</code> values in the parameters that are subsequently passed into the
+                        various lifecycle methods of the layout. The layout supports multiple root elements; if you do not supply a root then
+                        the default behaviour is to look for all top level Nodes and Groups that are not the target of any Edges. You can switch off multiple
+                        roots, and then the root element is the first Node (or Group, if there are no top level Nodes) found in the Graph (ie the first Node
+                        or Group you added to the Graph)</p>
+                        
+                        </div>
+                        
+                            <div class="constructor">
+                                <h2>Constructor</h2>
+                        <div id="method_Layouts.AbstractHierarchicalLayout" class="method item">
+                            <h3 class="name"><code>Layouts.AbstractHierarchicalLayout</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Constructor parameters</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name optional">[ignoreLoops=true]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Whether or not to ignore loops in the layout. When false,
+                        an exception will be thrown if a loop is found.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[multipleRoots=true]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>If false, multiple root elements are not supported.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[getRootNode]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Optional function that can return the Node(s)/Group(s) that should be the root(s)
+                        of the hierarchy. If this is not provided and <code>multipleRoots</code> is not set to false, all top level Nodes and all Groups that are not the target
+                        of any Edges form the set of root elements. If <code>multipleRoots</code> is set to false then the first top level Node in the Toolkit is used, or if no such Node
+                        exists, then the first Group is used.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[getChildEdges]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Optional function to be used to get edges to child elements for each Node/Group. The
+                        default is simply to look for Nodes/Groups that are targets of an Edge from the focus Node/Group (or one of a Node's port)s. Note that here we
+                        use the term &quot;children&quot; to mean elements that should appear in the next row/column from the focus element; the children
+                        of a Group itself are a different concept.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[ignorePorts=false]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>If true, Ports will not be considered when looking for edges (by the default getChildEdges function..if you
+                        provide your own getChildEdges function this parameter is ignored.)</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                            </div>
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods extends">
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__groupAdded">_groupAdded</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__groupMoved">_groupMoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__groupRemoved">_groupRemoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__nodeAdded">_nodeAdded</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__nodeMoved">_nodeMoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method__nodeRemoved">_nodeRemoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_begin">begin</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_clear">clear</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_end">end</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_getPosition">getPosition</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_getSize">getSize</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_groupAdded">groupAdded</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_groupRemoved">groupRemoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_layout">layout</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_magnetize">magnetize</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_nodeAdded">nodeAdded</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_nodeRemoved">nodeRemoved</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_relayout">relayout</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited inherited">
+                                                        <a href="#method_setPosition">setPosition</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method inherited">
+                                                        <a href="#method_setSize">setSize</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                        <div id="method__groupAdded" class="method item inherited">
+                            <h3 class="name"><code>_groupAdded</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__groupAdded">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to override should they wish to be informed of Group addition.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method args</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">group</code>
+                                                            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Group that was added</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">data</code>
+                                                            <span class="type">Object</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Data associated with the Group</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">el</code>
+                                                            <span class="type">Element</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The DOM element associated with the Group.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method__groupMoved" class="method item inherited">
+                            <h3 class="name"><code>_groupMoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>groupId</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>x</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>y</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__groupMoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to implement if they wish to be informed of a Group having moved.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">groupId</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Id of the the Group that was moved.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">x</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>New X location of the Group.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">y</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>New Y location of the Group.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method__groupRemoved" class="method item inherited">
+                            <h3 class="name"><code>_groupRemoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>group</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__groupRemoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to implement if they wish to be informed of Group removal.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">group</code>
+                                                <span class="type"><a href="../classes/Group.html" class="crosslink">Group</a></span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>The Group that was removed.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method__nodeAdded" class="method item inherited">
+                            <h3 class="name"><code>_nodeAdded</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__nodeAdded">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to override should they wish to be informed of Node addition.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method args</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">node</code>
+                                                            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Node that was added</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">data</code>
+                                                            <span class="type">Object</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Data associated with the Node</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">el</code>
+                                                            <span class="type">Element</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The DOM element associated with the Node.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method__nodeMoved" class="method item inherited">
+                            <h3 class="name"><code>_nodeMoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>nodeId</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>x</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>y</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__nodeMoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to implement if they wish to be informed of a Node having moved.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">nodeId</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Id of the the Node that was moved.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">x</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>New X location of the Node.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">y</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>New Y location of the Node.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method__nodeRemoved" class="method item inherited">
+                            <h3 class="name"><code>_nodeRemoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method__nodeRemoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Optional method for subclasses to implement if they wish to be informed of Node removal.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>The Node that was removed.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_begin" class="method item inherited">
+                            <h3 class="name"><code>begin</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>_jsPlumbToolkit</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>parameters</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_begin">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>This is an abstract function that subclasses may implement if they wish. It will be called at the beginning of a layout.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">_jsPlumbToolkit</code>
+                                                <span class="type">JsPlumbToolkitInstance</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>The associated jsPlumbToolkit instance</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">parameters</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Parameters configured for the layout.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_clear" class="method item inherited">
+                            <h3 class="name"><code>clear</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_clear">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Resets user-supplied and calculated positions.</p>
+                        
+                            </div>
+                        
+                        
+                        
+                        
+                        </div>
+                        <div id="method_end" class="method item inherited">
+                            <h3 class="name"><code>end</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>_jsPlumbToolkit</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>parameters</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_end">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>This is an abstract function that subclasses may implement if they wish. It will be called at the end of a layout.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">_jsPlumbToolkit</code>
+                                                <span class="type">JsPlumbToolkitInstance</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>The associated jsPlumbToolkit instance</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">parameters</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Parameters configured for the layout.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_getPosition" class="method item inherited">
+                            <h3 class="name"><code>getPosition</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>id</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[x]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[y]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[doNotRandomize=false]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_getPosition">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the position of the node with given id, creating it (as a random value) if null and optionally setting values.
+                        note this method does a 'pass by reference' thing as the return value - any changes you make will
+                        be used by the final layout step (this is a good thing). Note that here it is fine to work with
+                        the node's id, as we are not going anywhere near a DOM element yet. When it comes time to
+                        actually set a DOM element's position, we use the supplied <code>getElementForNode</code> function to
+                        get it.  And of course note also that we are not necessarily dealing with DOM elements.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">id</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the Node to retrieve the position for</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[x]</code>
+                                                <span class="type">Number</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional X location for the Node if its position has not yet been set.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[y]</code>
+                                                <span class="type">Number</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional Y location for the Node if its position has not yet been set.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[doNotRandomize=false]</code>
+                                                <span class="type">Boolean</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>If true, won't set a random position for an element whose position is not yet being tracked.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_getSize" class="method item inherited">
+                            <h3 class="name"><code>getSize</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>id</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Number</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_getSize">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the size of the node with given id, caching it for later use.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">id</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the node to retrieve size for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Number</span>:
+                                            <p>Width and height of the Node in an array.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_groupAdded" class="method item inherited">
+                            <h3 class="name"><code>groupAdded</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[eventInfo]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_groupAdded">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Called by components to inform a layout that a new Group was added. You should never
+                        call this method directly. Also, you should not override this method in a custom layout: if your layout
+                        needs to track Group addition, implement <code>_groupAdded</code> instead.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method args</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">group</code>
+                                                            <span class="type"><a href="../classes/Group.html" class="crosslink">Group</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Group that was added</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">el</code>
+                                                            <span class="type">Element</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The DOM element associated with the Group.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[eventInfo]</code>
+                                                <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional information associated with the Event that the host system needs to pass through without adding to the data model.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_groupRemoved" class="method item inherited">
+                            <h3 class="name"><code>groupRemoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_groupRemoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Called by components to inform a layout that a given Group was removed. You should never
+                        call this method directly.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method params</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">group</code>
+                                                            <span class="type"><a href="../classes/Group.html" class="crosslink">Group</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Group that was removed.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_layout" class="method item inherited">
+                            <h3 class="name"><code>layout</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_layout">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Runs the layout, without resetting calculated or user-provided positions beforehand.
+                        If the subclass has defined a <code>begin</code> method, that will be called first.  Then, the subclass's
+                        <code>step</code> method will be called repeatedly, until the subclass makes a call to <code>_super.setDone</code>.</p>
+                        
+                            </div>
+                        
+                        
+                        
+                        
+                        </div>
+                        <div id="method_magnetize" class="method item inherited">
+                            <h3 class="name"><code>magnetize</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code class="optional">[params]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_magnetize">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Magnetize the display. You must indicate what sort of magnetization you wish to perform: if you provide an event,
+                        the event's location will be the magnetization origin. If you provide <code>origin:{left;xxx, top:xxx}</code>, that value will be used. If
+                        you provide neither, the computed center of all elements will be used. You can also provide an <code>options:{...}</code> value, whose
+                        values can contain <code>filter</code>, <code>constrain</code> and <code>padding</code> values for the specific run of the magnetizer.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name optional">[params]</code>
+                                                <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Magnetize parameters. If omitted, the origin of magnetization will be the computed center of all the elements.</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name optional">[event]</code>
+                                                            <span class="type">Event</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>If provided, the event location will be used as the origin of magnetization.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[origin]</code>
+                                                            <span class="type">Object</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>An object with <code>left</code> and <code>top</code> properties. If provided, will be used as the origin of magnetization.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[options]</code>
+                                                            <span class="type">Object</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Extra magnetizer options for this run of the magnetizer.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_nodeAdded" class="method item inherited">
+                            <h3 class="name"><code>nodeAdded</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[eventInfo]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_nodeAdded">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Called by components to inform a layout that a new Node was added. You should never
+                        call this method directly. Also, you should not override this method in a custom layout: if your layout
+                        needs to track Node addition, implement <code>_nodeAdded</code> instead.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method args</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">node</code>
+                                                            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Node that was added</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">el</code>
+                                                            <span class="type">Element</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The DOM element associated with the Node.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[eventInfo]</code>
+                                                <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional information associated with the Event that the host system needs to pass through without adding to the data model.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_nodeRemoved" class="method item inherited">
+                            <h3 class="name"><code>nodeRemoved</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_nodeRemoved">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Called by components to inform a layout that a given Node was removed. You should never
+                        call this method directly.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method args</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">node</code>
+                                                            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Node that was removed</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_relayout" class="method item inherited">
+                            <h3 class="name"><code>relayout</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code class="optional">[newParameters]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[onComplete]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_relayout">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Runs the layout, first doing a reset of element positions. Next, if the subclass has defined a <code>begin</code> method, that will
+                        be called first.  Then, the subclass's <code>step</code> method will be called repeatedly, until the subclass makes a call to <code>_super.setDone</code>.
+                        Use the <code>layout</code> method to run the layout incrementally without first resetting everything.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name optional">[newParameters]</code>
+                                                <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional new set of parameters to apply.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[onComplete]</code>
+                                                <span class="type">Function</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional function to call on completion of relayout.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setPosition" class="method item inherited">
+                            <h3 class="name"><code>setPosition</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>id</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>x</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>y</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/Layouts.AbstractLayout.html#method_setPosition">
+                                        Layouts.AbstractLayout
+                                    </a>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the Position of the Node with the given ID.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">id</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the Node to set the position for</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">x</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>X location for the Node.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">y</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Y location for the Node.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setSize" class="method item inherited">
+                            <h3 class="name"><code>setSize</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>id</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>s</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>Inherited from
+                                        <a href="../classes/Layouts.AbstractLayout.html#method_setSize">Layouts.AbstractLayout</a>:
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets what the layout considers to be the size of the node with the given id. This method is not
+                        generally necessary if you use the <code>layout</code> methods on the surface widget.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">id</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the Node to set the size for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">s</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Size of the node.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                                    </div>
+                        
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

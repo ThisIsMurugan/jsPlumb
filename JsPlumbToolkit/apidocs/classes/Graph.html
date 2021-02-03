@@ -1,0 +1,2548 @@
+---
+layout: apidoc
+title:  "Graph API documentation"
+date:   2014-01-01 00:00:00
+yuiGridsUrl: http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css
+yuiSeedUrl: http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js
+projectAssets: ../assets
+---
+
+
+
+<div id="doc">
+    <div id="bd" class="yui3-g">
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Cluster.html">Cluster</a></li>
+                                <li><a href="../classes/Edge.html">Edge</a></li>
+                                <li><a href="../classes/FaraheyInstance.html">FaraheyInstance</a></li>
+                                <li><a href="../classes/Graph.html">Graph</a></li>
+                                <li><a href="../classes/Group.html">Group</a></li>
+                                <li><a href="../classes/jsPlumb Palette directive.html">jsPlumb Palette directive</a></li>
+                                <li><a href="../classes/jsPlumbToolkit directive..html">jsPlumbToolkit directive.</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Dialogs.html">jsPlumbToolkit.Dialogs</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.DrawingTools.html">jsPlumbToolkit.DrawingTools</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Model.html">jsPlumbToolkit.Model</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.AbstractRenderer.html">jsPlumbToolkit.Renderers.AbstractRenderer</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.Miniview.html">jsPlumbToolkit.Renderers.Miniview</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Support.html">jsPlumbToolkit.Support</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Widgets.Lasso.html">jsPlumbToolkit.Widgets.Lasso</a></li>
+                                <li><a href="../classes/jsPlumbToolkitInstance.html">jsPlumbToolkitInstance</a></li>
+                                <li><a href="../classes/Layouts.Absolute.html">Layouts.Absolute</a></li>
+                                <li><a href="../classes/Layouts.AbsoluteBackedLayout.html">Layouts.AbsoluteBackedLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractHierarchicalLayout.html">Layouts.AbstractHierarchicalLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractLayout.html">Layouts.AbstractLayout</a></li>
+                                <li><a href="../classes/Layouts.EmptyLayout.html">Layouts.EmptyLayout</a></li>
+                                <li><a href="../classes/Layouts.Hierarchical.html">Layouts.Hierarchical</a></li>
+                                <li><a href="../classes/Layouts.Mistletoe.html">Layouts.Mistletoe</a></li>
+                                <li><a href="../classes/Layouts.Spring.html">Layouts.Spring</a></li>
+                                <li><a href="../classes/Mottle.html">Mottle</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/Path.html">Path</a></li>
+                                <li><a href="../classes/Port.html">Port</a></li>
+                                <li><a href="../classes/Selection.html">Selection</a></li>
+                                <li><a href="../classes/Surface.html">Surface</a></li>
+                                <li><a href="../classes/ZoomWidget.html">ZoomWidget</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>Graph Class</h1>
+                        <div class="box meta">
+                        
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>A Graph.  Contains a list of Vertex objects, each of which has 0..N Ports, and a list of Edge objects. Every instance
+                        of the jsPlumb Toolkit is backed by an instance of this class.</p>
+                        <p>A good discussion on Graphs can be found on Wikipedia: <a href="http://en.wikipedia.org/wiki/Graph_(mathematics)">http://en.wikipedia.org/wiki/Graph_(mathematics)</a>.</p>
+                        <p>You will not typically need to construct a Graph directly (at least not when using the Toolkit; there is nothing
+                        stopping you from using this class directly for other purposes).</p>
+                        
+                        </div>
+                        
+                            <div class="constructor">
+                                <h2>Constructor</h2>
+                        <div id="method_Graph" class="method item">
+                            <h3 class="name"><code>Graph</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code class="optional">[params]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name optional">[params]</code>
+                                                <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Constructor parameters. Optional. The Graph class has sensible defaults.</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name optional">[defaultDirected=true]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Whether edges are directed by default.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[idFunction]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Function to use to extract an appropriate ID from the JSON for a give node. Defaults to returning the 'id' property of the JSON.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[enableSubgraphs=false]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>If true, Nodes are Graphs themselves, and can have child Nodes. If you enable this then you cannot use slashes (/) in your Node ids, as they will be treated as components of a path to a Node in a nested Graph.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[defaultCost=1]</code>
+                                                            <span class="type">Number</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Default cost for Edges.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[portSeparator=&quot;.&quot;]</code>
+                                                            <span class="type">String</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The character(s) used to separate ports from nodes in port ids.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                            </div>
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method">
+                                                        <a href="#method_addEdge">addEdge</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_addNode">addNode</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_addNodes">addNodes</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_clear">clear</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_deleteEdge">deleteEdge</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_deleteGroup">deleteGroup</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_deleteNode">deleteNode</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_findPath">findPath</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getBetweenness">getBetweenness</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getCentrality">getCentrality</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getCloseness">getCloseness</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getDiameter">getDiameter</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getDistance">getDistance</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getEdge">getEdge</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getEdgeCount">getEdgeCount</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getFarness">getFarness</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getGroupAt">getGroupAt</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getGroups">getGroups</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getIdFunction">getIdFunction</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getIndegreeCentrality">getIndegreeCentrality</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getNode">getNode</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getNodeAt">getNodeAt</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getNodeCount">getNodeCount</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getNodes">getNodes</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getOutdegreeCentrality">getOutdegreeCentrality</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getPortSeparator">getPortSeparator</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getType">getType</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_getVertexByPortId">getVertexByPortId</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_printPath">printPath</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_setIdFunction">setIdFunction</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_setIdFunction">setIdFunction</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_setPortSeparator">setPortSeparator</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_setSource">setSource</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_setTarget">setTarget</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#method_splitPortId">splitPortId</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                        <div id="method_addEdge" class="method item">
+                            <h3 class="name"><code>addEdge</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Edge.html" class="crosslink">Edge</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Adds an Edge to the Graph.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Parameters for new Edge.</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name">source</code>
+                                                            <span class="type">String | <a href="../classes/Node.html" class="crosslink">Node</a> | <a href="../classes/Port.html" class="crosslink">Port</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Source for the Edge - a Node, Port or Node/Port id.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name">target</code>
+                                                            <span class="type">String | <a href="../classes/Node.html" class="crosslink">Node</a> | <a href="../classes/Port.html" class="crosslink">Port</a></span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Target for the Edge - a Node, Port or Node/Port id.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[cost=1]</code>
+                                                            <span class="type">Integer</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Edge cost. This is used when computing shortest paths through the graph. If
+                        an Edge is not <code>directed</code>, then the same cost is applied regardless of the direction of traversal.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[directed=true]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Whether or not the Edge is directed.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[data]</code>
+                                                            <span class="type">Object</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Optional data to associate with the Edge.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[geometry]</code>
+                                                            <span class="type">Object</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Optional geometry for the Edge.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Edge.html" class="crosslink">Edge</a></span>:
+                                            <p>The Edge that was added.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_addNode" class="method item">
+                            <h3 class="name"><code>addNode</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>data</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[idFunction]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>The</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Adds a Node to the Graph</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">data</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Backing data for the Node</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[idFunction]</code>
+                                                <span class="type">Function</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional function to use to retrieve ID from backing data. Defaults to retrieving <code>id</code> from data object.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">The</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node that was added.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_addNodes" class="method item">
+                            <h3 class="name"><code>addNodes</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>data</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[idFunction]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Adds a list of Nodes to the Graph</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">data</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>List of data objects, one for each Node to be added.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[idFunction]</code>
+                                                <span class="type">Function</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional function to use to retrieve ID from backing data. Defaults to retrieving <code>id</code> from data object.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_clear" class="method item">
+                            <h3 class="name"><code>clear</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Clears the Graph of all its Nodes, Groups, Ports and Edges.</p>
+                        
+                            </div>
+                        
+                        
+                        
+                        
+                        </div>
+                        <div id="method_deleteEdge" class="method item">
+                            <h3 class="name"><code>deleteEdge</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>edge</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Deletes an Edge.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">edge</code>
+                                                <span class="type"><a href="../classes/Edge.html" class="crosslink">Edge</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Edge, or ID of Edge, to delete.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_deleteGroup" class="method item">
+                            <h3 class="name"><code>deleteGroup</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>g</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[removeMembers=false]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Deletes a Group</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">g</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Either a Group, or a Group id.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[removeMembers=false]</code>
+                                                <span class="type">Boolean</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>If true, also remove all the Nodes that are members of the Group.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_deleteNode" class="method item">
+                            <h3 class="name"><code>deleteNode</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Deletes a Node, Port or Group.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Either a Node/Port/Group, or a Node/Port/Group id.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_findPath" class="method item">
+                            <h3 class="name"><code>findPath</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>source</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>target</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[strict=true]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[nodeFilter]</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[edgeFilter]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Vertex, cost, edge \</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Finds the shortest path from source to target, using the Djikstra algorithm.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">source</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Source Node or Node ID.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">target</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Target Node or Node ID.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[strict=true]</code>
+                                                <span class="type">Boolean</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Sets whether or not paths are searched strictly by the given source/target. If, for instance, you supply a node as the source, but there are only edges connected to ports on that node, by default these edges will be ignored. Switching <code>strict</code> to false will mean these edges are considered.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[nodeFilter]</code>
+                                                <span class="type">Function</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional function that is given each Node's backing data and asked to return true or false - true means include the Node, false means exclude it.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[edgeFilter]</code>
+                                                <span class="type">Function</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Optional function that is given each Edge's backing data and asked to return true or false - true means include the Edge, false means exclude it.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Vertex, cost, edge \</span>:
+                                            <p>An array like <code>[ \, \{ vertex,cost,edge \} ... ]</code> when successful; when unsuccessful the three compiled
+                        tables are returned - distances to nodes, each node's previous node, and the associated edge.  so you can call this method with
+                        no target set and get the entire table populated.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getBetweenness" class="method item">
+                            <h3 class="name"><code>getBetweenness</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Float</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the betweenness centrality of the given node.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve betweenness centrality for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Float</span>:
+                                            <p>Node's &quot;betweenness&quot; centrality.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getCentrality" class="method item">
+                            <h3 class="name"><code>getCentrality</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Integer</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the degree centrality of the given node. This is an alias to <code>getDegreeCentrality</code>, as centrality
+                        most commonly refers to degree centrality. Note that this returns incoming and outgoing connections; use
+                        getIndegreeCentrality or getOutdegreeCentrality if you need to be more specific.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve centrality for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Integer</span>:
+                                            <p>Node's centrality.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getCloseness" class="method item">
+                            <h3 class="name"><code>getCloseness</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Float</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the Closeness centrality of the given node. This is the inverse of the node's farness.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve closeness for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Float</span>:
+                                            <p>Node's &quot;closeness&quot;.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getDiameter" class="method item">
+                            <h3 class="name"><code>getDiameter</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code class="optional">[dontUseMax=false]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Number</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the <code>diameter</code> of the Graph.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name optional">[dontUseMax=false]</code>
+                                                <span class="type">Boolean</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Whether or not to return Infinity if there is at least one pair of nodes for which there is no available path.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Number</span>:
+                                            <p>Diameter of the Graph.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getDistance" class="method item">
+                            <h3 class="name"><code>getDistance</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>source</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code>target</code>
+                                        </li>
+                                        <li class="arg">
+                                                <code class="optional">[strict=true]</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Number</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Finds the distance between source and target.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">source</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Source Node or Node ID.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">target</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Target Node or Node ID.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name optional">[strict=true]</code>
+                                                <span class="type">Boolean</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Sets whether or not paths are searched strictly by the given source/target. If, for instance, you supply a node as the source, but there are only edges connected to ports on that node, by default these edges will be ignored. Switching <code>strict</code> to false will mean these edges are considered.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Number</span>:
+                                            <p>Distance from the source to the target.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getEdge" class="method item">
+                            <h3 class="name"><code>getEdge</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>e</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Edge.html" class="crosslink">Edge</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets an Edge by id, or if the given object is already an Edge, hands that back.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">e</code>
+                                                <span class="type">String | <a href="../classes/Edge.html" class="crosslink">Edge</a> | Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the Edge to retrieve, or an actual Edge, or some data from which an ID could be derived.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Edge.html" class="crosslink">Edge</a></span>:
+                                            <p>The requested Edge, if found, otherwise null.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getEdgeCount" class="method item">
+                            <h3 class="name"><code>getEdgeCount</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Integer</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the total number of Edges in the graph.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Integer</span>:
+                                            <p>The total number of Edges.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getFarness" class="method item">
+                            <h3 class="name"><code>getFarness</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Number</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the farness centrality of the given node, ie. the sum of its distance from all other nodes, where the distance from one Node to another is given by the associated cost of the Edge joining the two Nodes.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve farness for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Number</span>:
+                                            <p>Node's &quot;farness&quot;.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getGroupAt" class="method item">
+                            <h3 class="name"><code>getGroupAt</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>idx</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Group.html" class="crosslink">Group</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the Group at the given index.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">idx</code>
+                                                <span class="type">Number</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Index into group list</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Group.html" class="crosslink">Group</a></span>:
+                                            <p>a Group, or null if not found.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getGroups" class="method item">
+                            <h3 class="name"><code>getGroups</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Group.html" class="crosslink">Group[]</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the Groups in the graph.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Group.html" class="crosslink">Group[]</a></span>:
+                                            <p>All the groups in the Graph.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getIdFunction" class="method item">
+                            <h3 class="name"><code>getIdFunction</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Function</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the current function to use to extract an appropriate ID from the JSON for any given object.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Function</span>:
+                                            <p>Function in use for extracting IDs.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getIndegreeCentrality" class="method item">
+                            <h3 class="name"><code>getIndegreeCentrality</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Integer</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the indegree centrality of the given node (number of connections entering the vertex)</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve indegree centrality for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Integer</span>:
+                                            <p>Node's indegree centrality.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getNode" class="method item">
+                            <h3 class="name"><code>getNode</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>id</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the Node or Port with the given id, null if not found.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">id</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node or Port id.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>:
+                                            <p>Node/Port if found, null otherwise.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getNodeAt" class="method item">
+                            <h3 class="name"><code>getNodeAt</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>index</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the Node at the given index (used for bulk init type purposes)</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">index</code>
+                                                <span class="type">Integer</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Index of the Node to retrieve</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>:
+                                            <p>Node at the given index.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getNodeCount" class="method item">
+                            <h3 class="name"><code>getNodeCount</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Integer</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the count of Nodes in the Graph.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Integer</span>:
+                                            <p>The total number of Nodes in the graph.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getNodes" class="method item">
+                            <h3 class="name"><code>getNodes</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"><a href="../classes/Node.html" class="crosslink">Node[]</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets all the Nodes in the Graph.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node[]</a></span>:
+                                            <p>All the Nodes in the Graph.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getOutdegreeCentrality" class="method item">
+                            <h3 class="name"><code>getOutdegreeCentrality</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>node</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Integer</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the outdegree centrality of the given node (number of connections exiting the vertex)</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">node</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node, or Node ID, to retrieve outdegree centrality for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Integer</span>:
+                                            <p>Node's indegree centrality.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getPortSeparator" class="method item">
+                            <h3 class="name"><code>getPortSeparator</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">String</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the current port separator.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">String</span>:
+                                            <p>Port separator string. Default is &quot;.&quot;</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getType" class="method item">
+                            <h3 class="name"><code>getType</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>data</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">String</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Gets the type for some data, by running it through the current typeFunction.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">data</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Object to get type from.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">String</span>:
+                                            <p>The calculated type for the given object.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_getVertexByPortId" class="method item">
+                            <h3 class="name"><code>getVertexByPortId</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>portId</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type"></span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Looks up a vertex identified by the port id, which is in full port id (vertexId.portId) format, returning null if nothing found.
+                        (Note that we show full port id format as vertexId.portId, but the '.' is just the default portSeparator; it is possible to change that
+                        to some other character)</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">portId</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>ID of the port to find a vertex for.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type"></span>:
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_printPath" class="method item">
+                            <h3 class="name"><code>printPath</code></h3>
+                        
+                                <span class="paren">()</span>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">String</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Returns the path from source to target as a String.</p>
+                        
+                            </div>
+                        
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">String</span>:
+                                            <p>Printed path. Mostly useful for debugging.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                        <div id="method_setIdFunction" class="method item">
+                            <h3 class="name"><code>setIdFunction</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>idFunction</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the default function to use to extract an appropriate ID from the JSON for any given object.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">idFunction</code>
+                                                <span class="type">Function</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Function to use to extract IDs.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setIdFunction" class="method item">
+                            <h3 class="name"><code>setIdFunction</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>f</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the default function to use to extract an appropriate type from the JSON for any given object.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">f</code>
+                                                <span class="type">Function</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Function to use to extract IDs.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setPortSeparator" class="method item">
+                            <h3 class="name"><code>setPortSeparator</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>separator</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the character(s) used to separate ports from nodes in port ids. By default this is '.', ie a
+                        port is addressed as <code>nodeId.portId</code>. This may need to be changed depending on the data in your model.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">separator</code>
+                                                <span class="type">String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Separator to use.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setSource" class="method item">
+                            <h3 class="name"><code>setSource</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>o</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the source Node/Port for some Edge.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">o</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="../classes/Port.html" class="crosslink">Port</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node/Port/id for new Edge source</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_setTarget" class="method item">
+                            <h3 class="name"><code>setTarget</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>o</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Sets the target Node/Port for some Edge.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">o</code>
+                                                <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="../classes/Port.html" class="crosslink">Port</a> | String</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Node/Port/id for new Edge target</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        
+                        
+                        </div>
+                        <div id="method_splitPortId" class="method item">
+                            <h3 class="name"><code>splitPortId</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>portId</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">Array</span>
+                                </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Splits the given port id using the current portSeparator.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">portId</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Port ID to split.</p>
+                        
+                                            </div>
+                        
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">Array</span>:
+                                            <p>An array of [ vertexId, portId], or [] if the portId was null.</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                                    </div>
+                        
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

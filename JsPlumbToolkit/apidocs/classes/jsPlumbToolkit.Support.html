@@ -1,0 +1,319 @@
+---
+layout: apidoc
+title:  "jsPlumbToolkit.Support API documentation"
+date:   2014-01-01 00:00:00
+yuiGridsUrl: http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css
+yuiSeedUrl: http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js
+projectAssets: ../assets
+---
+
+
+
+<div id="doc">
+    <div id="bd" class="yui3-g">
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Cluster.html">Cluster</a></li>
+                                <li><a href="../classes/Edge.html">Edge</a></li>
+                                <li><a href="../classes/FaraheyInstance.html">FaraheyInstance</a></li>
+                                <li><a href="../classes/Graph.html">Graph</a></li>
+                                <li><a href="../classes/Group.html">Group</a></li>
+                                <li><a href="../classes/jsPlumb Palette directive.html">jsPlumb Palette directive</a></li>
+                                <li><a href="../classes/jsPlumbToolkit directive..html">jsPlumbToolkit directive.</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Dialogs.html">jsPlumbToolkit.Dialogs</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.DrawingTools.html">jsPlumbToolkit.DrawingTools</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Model.html">jsPlumbToolkit.Model</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.AbstractRenderer.html">jsPlumbToolkit.Renderers.AbstractRenderer</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Renderers.Miniview.html">jsPlumbToolkit.Renderers.Miniview</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Support.html">jsPlumbToolkit.Support</a></li>
+                                <li><a href="../classes/jsPlumbToolkit.Widgets.Lasso.html">jsPlumbToolkit.Widgets.Lasso</a></li>
+                                <li><a href="../classes/jsPlumbToolkitInstance.html">jsPlumbToolkitInstance</a></li>
+                                <li><a href="../classes/Layouts.Absolute.html">Layouts.Absolute</a></li>
+                                <li><a href="../classes/Layouts.AbsoluteBackedLayout.html">Layouts.AbsoluteBackedLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractHierarchicalLayout.html">Layouts.AbstractHierarchicalLayout</a></li>
+                                <li><a href="../classes/Layouts.AbstractLayout.html">Layouts.AbstractLayout</a></li>
+                                <li><a href="../classes/Layouts.EmptyLayout.html">Layouts.EmptyLayout</a></li>
+                                <li><a href="../classes/Layouts.Hierarchical.html">Layouts.Hierarchical</a></li>
+                                <li><a href="../classes/Layouts.Mistletoe.html">Layouts.Mistletoe</a></li>
+                                <li><a href="../classes/Layouts.Spring.html">Layouts.Spring</a></li>
+                                <li><a href="../classes/Mottle.html">Mottle</a></li>
+                                <li><a href="../classes/Node.html">Node</a></li>
+                                <li><a href="../classes/Path.html">Path</a></li>
+                                <li><a href="../classes/Port.html">Port</a></li>
+                                <li><a href="../classes/Selection.html">Selection</a></li>
+                                <li><a href="../classes/Surface.html">Surface</a></li>
+                                <li><a href="../classes/ZoomWidget.html">ZoomWidget</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>jsPlumbToolkit.Support Class</h1>
+                        <div class="box meta">
+                        
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        <div class="box intro">
+                            <p>Support functionality for working with existing jsPlumb instances in the Toolkit. Using the <code>ingest</code> method in this
+                        class, you can ingest an existing jsPlumb instance into a new instance of the Toolkit; this for many people may
+                        prove to be a logical upgrade path from their existing jsPlumb code.</p>
+                        <p>When you ingest an existing jsPlumb instance, its <code>Container</code> is configured to be a <code>Surface</code> widget, which makes
+                        it pannable and zoomable, and the set of Nodes and Edges it is managing are loaded into the Toolkit's data model.</p>
+                        
+                        </div>
+                        
+                        
+                        <div id="classdocs" class="tabview">
+                            <ul class="api-class-tabs">
+                                <li class="api-class-tab index"><a href="#index">Index</a></li>
+                        
+                                    <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+                            </ul>
+                        
+                            <div>
+                                <div id="index" class="api-class-tabpanel index">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                                        <div class="index-section methods">
+                                            <h3>Methods</h3>
+                        
+                                            <ul class="index-list methods">
+                                                    <li class="index-item method">
+                                                        <a href="#method_ingest">ingest</a>
+                        
+                                                            <span class="flag static">static</span>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                        
+                                </div>
+                        
+                                    <div id="methods" class="api-class-tabpanel">
+                                        <h2 class="off-left">Methods</h2>
+                        
+                        <div id="method_ingest" class="method item">
+                            <h3 class="name"><code>ingest</code></h3>
+                        
+                                <div class="args">
+                                    <span class="paren">(</span><ul class="args-list inline commas">
+                                        <li class="arg">
+                                                <code>params</code>
+                                        </li>
+                                    </ul><span class="paren">)</span>
+                                </div>
+                        
+                                <span class="returns-inline">
+                                    <span class="type">JsPlumbToolkitInstance | <a href="../classes/Surface.html" class="crosslink">Surface</a></span>
+                                </span>
+                        
+                        
+                        
+                        
+                                <span class="flag static">static</span>
+                        
+                        
+                        
+                            <div class="meta">
+                                        <p>
+                                </p>
+                        
+                        
+                        
+                            </div>
+                        
+                            <div class="description">
+                                <p>Ingests an existing jsPlumb instance into a new Toolkit instance, and turns the instance's Container into a Surface.  Every element
+                        that is the source or target of a Connection is added to the Toolkit instance as a Node, and every Connection is added as an Edge. You
+                        can provide your own functions for determining the <code>id</code> and <code>type</code> of Nodes and Edges, if you need to. This method will throw an error
+                        if your jsPlumb instance does not have a Container set; it is a requirement for the Surface widget.</p>
+                        
+                            </div>
+                        
+                                <div class="params">
+                                    <h4>Parameters:</h4>
+                        
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">params</code>
+                                                <span class="type">Object</span>
+                        
+                        
+                                            <div class="param-description">
+                                                <p>Method parameters.</p>
+                        
+                                            </div>
+                        
+                                                <ul class="params-list">
+                                                    <li class="param">
+                                                            <code class="param-name optional">[jsPlumb]</code>
+                                                            <span class="type">JsPlumbInstance</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>The instance of jsPlumb to ingest. If null, it uses the static jsPlumb window instance.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[nodeSelector]</code>
+                                                            <span class="type">String</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Optional selector to identify elements that may not yet be managed by jsPlumb but which you would like to have imported as Nodes.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[idFunction]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>A function to use to extract the id from elements that are being loaded as Nodes. If null,
+                        the default behaviour is to ask the jsPlumb instance for the element's <code>id</code> attribute.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[typeFunction]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>A function to use to extract the type from elements that are being loaded as Nodes. If null,
+                        the default behaviour is to use <code>default</code> as the Node type.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[edgeIdFunction]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>A function to use to extract the id from Connections that are being loaded as Edges. If null,
+                        the default behaviour is to use the Connection's <code>id</code>.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[edgeTypeFunction]</code>
+                                                            <span class="type">Function</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>A function to use to extract the type from Connections that are being loaded as Edges. If null,
+                        the default behaviour is to use <code>default</code> as the Edge type.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[renderParams]</code>
+                                                            <span class="type">Object</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>Parameters to pass to the Surface constructor.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                    <li class="param">
+                                                            <code class="param-name optional">[render=true]</code>
+                                                            <span class="type">Boolean</span>
+                                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+                                                        <div class="param-description">
+                                                            <p>If false, this method returns only a Toolkit instance with data loaded, and doesn't create a Surface renderer for it.</p>
+                        
+                                                        </div>
+                        
+                                                    </li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="returns">
+                                    <h4>Returns:</h4>
+                        
+                                    <div class="returns-description">
+                                                <span class="type">JsPlumbToolkitInstance | <a href="../classes/Surface.html" class="crosslink">Surface</a></span>:
+                                            <p>A Surface instance whose underlying Toolkit has been loaded with the contents of the jsPlumb instance (you can access the Toolkit itself via <code>surface.getToolkit()</code>), or, if <code>render</code> was set to false, a <code>jsPlumbToolkitInstance</code>..</p>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        </div>
+                                    </div>
+                        
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
